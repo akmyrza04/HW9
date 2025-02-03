@@ -3,17 +3,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        text();
         print();
     }
 
-    public static void text(){
+    public static int text(){
         System.out.println("Welcome\nPrint your number: ");
+        return new Scanner(System.in).nextInt();
     }
 
     public static void print(){
-        int print = new Scanner(System.in).nextInt();
-        boolean input = (print % 2 == 0);
-        System.out.println(input);
+        System.out.println(text() % 2 == 0);
     }
 }
